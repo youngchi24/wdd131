@@ -1,205 +1,161 @@
-/* ==========================
-   GOOGLE FONTS & VARIABLES
-========================== */
+/* WDD 131 - Dynamic Web Fundamentals
+   Author: Prosper Chidike Nwogu
+*/
 
 :root {
-    --primary-color: #14213d;
-    --secondary-color: #1b4332;
-    --accent-color: #52b788;
-    --background-color: #f1f5f9;
-    --card-color: #ffffff;
-    --text-color: #263238;
-    --light-text: #ffffff;
-    --border-color: #dce4e8;
-
-    --heading-font: "Montserrat", sans-serif;
-    --body-font: "Roboto", sans-serif;
+    --color-navy: #14213d;
+    --color-green: #1b4332;
+    --color-accent: #52b788;
+    --color-background: #f1f5f9;
+    --color-card: #ffffff;
+    --color-text: #243047;
+    --color-muted: #526174;
+    --color-border: #d8e0e9;
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Roboto", sans-serif;
 }
 
-/* ==========================
-   GENERAL RESET
-========================== */
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: var(--body-font);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
     line-height: 1.6;
 }
 
-/* ==========================
-   HEADER
-========================== */
-
 header {
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    text-align: center;
-    padding: 25px 15px 0;
+    background-color: var(--color-navy);
+    color: #ffffff;
 }
 
 #course-title {
     display: block;
-    font-family: var(--heading-font);
-    font-size: 1.7rem;
-    font-weight: 800;
-    padding: 10px;
-    letter-spacing: 0.5px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
 }
-
-/* ==========================
-   NAVIGATION - FLEXBOX
-========================== */
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--secondary-color);
-    margin-top: 20px;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-green);
 }
 
 nav a {
     flex: 1;
-    display: block;
-    color: var(--light-text);
+    padding: 0.7rem 0.5rem;
+    border-radius: 6px;
+    color: #ffffff;
+    text-align: center;
     text-decoration: none;
-    padding: 18px 12px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Navigation Hover Effect */
-
-nav a:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+nav a:hover,
+nav a:focus-visible {
+    background-color: var(--color-accent);
+    color: #10251c;
     transform: translateY(-2px);
 }
 
-/* ==========================
-   MAIN CONTENT
-========================== */
-
 main {
-    max-width: 1100px;
-    margin: 35px auto;
-    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: min(1100px, 92%);
+    margin: 2rem auto;
 }
 
-main h1 {
-    font-family: var(--heading-font);
+h1 {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--color-navy);
     text-align: center;
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
-
-/* ==========================
-   CARDS - CSS GRID
-========================== */
 
 .card {
-    background-color: var(--card-color);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background-color: var(--color-card);
+    box-shadow: 0 4px 14px rgb(20 33 61 / 8%);
 }
 
 .card h2 {
-    font-family: var(--heading-font);
-    background-color: var(--primary-color);
-    color: var(--light-text);
+    margin-top: 0;
+    padding-bottom: 0.6rem;
+    border-bottom: 3px solid var(--color-accent);
+    color: var(--color-green);
     text-align: center;
-    padding: 16px;
-    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
 }
 
 .card img {
     display: block;
-    width: 200px;
-    max-width: 100%;
+    width: min(100%, 300px);
     height: auto;
-    margin: 25px auto;
+    margin: 1rem auto;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 .card p {
-    padding: 15px 25px 25px;
-    line-height: 1.8;
-    text-align: justify;
+    margin-bottom: 0.8rem;
 }
 
-/* Grid layout for the two cards */
-
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+.card a {
+    color: #145c42;
+    font-weight: 700;
 }
 
-main h1 {
-    grid-column: 1 / -1;
+.card a:hover,
+.card a:focus-visible {
+    color: #0b3828;
+    text-decoration-thickness: 2px;
 }
-
-/* ==========================
-   FOOTER
-========================== */
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--light-text);
+    padding: 1.25rem 1rem;
+    background-color: var(--color-navy);
+    color: #ffffff;
     text-align: center;
-    padding: 25px 15px;
-    margin-top: 40px;
 }
 
 footer p {
-    margin: 8px;
-    font-size: 0.95rem;
+    margin: 0.35rem 0;
 }
 
-#lastModified {
-    color: var(--accent-color);
-    font-size: 0.85rem;
-}
-
-/* ==========================
-   RESPONSIVE DESIGN
-========================== */
-
-@media screen and (max-width: 700px) {
-
-    #course-title {
-        font-size: 1.2rem;
-    }
-
+@media (max-width: 700px) {
     nav {
         flex-direction: column;
+        align-items: stretch;
     }
 
     nav a {
         width: 100%;
-        padding: 14px;
     }
 
     main {
         grid-template-columns: 1fr;
-        margin: 20px auto;
+        width: min(600px, 92%);
+        margin: 1.25rem auto;
     }
 
-    main h1 {
-        font-size: 1.5rem;
-    }
-
-    .card img {
-        width: 180px;
+    h1 {
+        grid-column: 1;
     }
 }
