@@ -1,0 +1,41 @@
+@media screen and (min-width: 600px) {
+
+    /* Header */
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    /* Hide hamburger button */
+    .menu-button {
+        display: none;
+    }
+
+    /* Desktop Navigation */
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+    }
+
+    .navigation a {
+        padding: 0.8rem;
+    }
+
+    /* Temple Grid */
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
