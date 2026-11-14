@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover Abia State, Nigeria, including its location, culture, important facts, and weather.">
+    <meta name="author" content="Prosper Chidike Nwogu">
+
+    <title>Abia State, Nigeria | WDD 131</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Abia State, Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+
+            <picture>
+                <source
+                    srcset="images/abia-large.webp"
+                    media="(min-width: 900px)">
+
+                <img
+                    src="images/abia-small.webp"
+                    alt="A beautiful view of Abia State, Nigeria"
+                    width="500"
+                    height="250">
+            </picture>
+
+            <section class="data-card">
+                <h2>Data</h2>
+
+                <div class="data-list">
+                    <p><strong>Area:</strong> <span>6,320 km²</span></p>
+                    <p><strong>Capital:</strong> <span>Umuahia</span></p>
+                    <p><strong>Largest City:</strong> <span>Aba</span></p>
+                    <p><strong>Language:</strong> <span>Igbo, English</span></p>
+                    <p><strong>Currency:</strong> <span>Nigerian Naira</span></p>
+                    <p><strong>Time Zone:</strong> <span>UTC+1</span></p>
+                </div>
+            </section>
+
+            <section class="weather-card">
+                <h2>Weather</h2>
+
+                <img
+                    class="weather-icon"
+                    src="images/weather-partly-cloudy.svg"
+                    alt="Partly cloudy weather">
+
+                <div class="weather-list">
+                    <p><strong>Temperature:</strong> <span><span id="temperature">29</span> °C</span></p>
+                    <p><strong>Conditions:</strong> <span>Partly Cloudy</span></p>
+                    <p><strong>Wind:</strong> <span><span id="wind-speed">12</span> km/h</span></p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>
+            Prosper Chidike Nwogu | Abia State, Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
