@@ -1,0 +1,17 @@
+WDD 131 – Week 4 Project: Website Subject
+
+1.	Subject
+Youngchi Empire – Cybersecurity and Digital Protection.
+
+2.	Content
+I want to create a website about Youngchi Empire, a project that focuses on cybersecurity 
+and protecting digital information. The website will explain what cybersecurity is, common 
+online threats, and simple ways people can protect their devices and personal information. 
+It will also introduce the Youngchi Empire project and some of its features.
+
+3.	Reason
+I chose this topic because I have always been interested in technology, computers, 
+and cybersecurity. I want to learn more about how people can stay safe online while 
+improving my skills in web development. I also think this website will give me an opportunity 
+to share useful information that can help others protect themselves on the internet.
+
